@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+route::any('agenda/search', 'AgendaController@search')->name('agenda.search');
 Route::resource('agenda', 'AgendaController');
 
-Route::get('/', 'AgendaController@index');
+Route::get('/', function()
+{
+    return redirect()->route('agenda.index');
+});

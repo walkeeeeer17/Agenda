@@ -15,12 +15,11 @@ class CreateAgendasTable extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
             $table->string('nome');
-            $table->string('sobrenome');
+            $table->string('foto')->nullable();
             $table->string('numero');
-            $table->string('numero_trabalho');
-            $table->string('endereco');
+            $table->string('numero_trabalho')->nullable();
+            $table->string('endereco')->nullable();
             $table->timestamps();
         });
     }

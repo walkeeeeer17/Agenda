@@ -8,19 +8,35 @@
     <title>Agenda</title>
 </head>
 <body>
-    <div style="width:100%;height:130px;background:#3c434a">
-    <header class="menu">
+    <div style="width:100%;height:80px;background:#3c434a;">
+    <div class="mr-5">
+    <header class="menu mr-5 pt-3">
         <ul class="list-group list-group-horizontal float-right">
             <li class="list-group-item">
-                Home
+                <a href="/">
+                    Home
+                </a>
             </li>
             <li class="list-group-item">
-                Adicionar
+                <a href="{{route('agenda.create')}}">
+                    Adicionar
+                </a>
             </li>
         </ul>
     </header>
     </div>
+    </div>
+    <div class="container-fluid">
     @yield('content')
-    <footer class="footer">&copy; Gabriel Pellin Caetano</footer>
+    </div>
+
+
+    <footer class="container py-5">
+        <div style="text-align:center">
+            &copy; Gabriel Pellin Caetano - Agenda Engeselt SP
+        </div>
+        
+    </footer>
+
 </body>
 </html>
