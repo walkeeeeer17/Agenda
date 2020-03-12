@@ -39,7 +39,7 @@
     <tr><td><form action="{{route('agenda.destroy', $contato->id)}}" method="post">
         @csrf
         @method('DELETE')
-        <button type="submit" class="btn btn-dark">Deletar</button></center>
+        <button type="submit" class="delete btn btn-dark">Deletar</button></center>
     </form></td><td><a href="{{route('agenda.edit', $contato->id)}}" class="btn btn-dark">Editar</a></td></tr>
-    </table></center>
+    </table></center> 
 @endsection
